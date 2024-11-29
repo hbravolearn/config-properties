@@ -1,0 +1,20 @@
+config:
+  settings:
+    pool: 12
+    queue: 45
+  accounts:
+    - SOLES
+    - DOLARES
+  fruits:
+    - name: banana
+      origen: sudamerica
+    - name: pera
+      origen: centroamerica
+  clients:
+    name: Pedro
+    edad: 23
+    diversion:
+      hobbies:
+        - correr
+        - nadar
+        - fuerza

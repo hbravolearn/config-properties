@@ -1,0 +1,20 @@
+config:
+  settings:
+    pool: 45
+    queue: 25
+  accounts:
+    - SOLES
+    - DOLARES
+  fruits:
+    - name: banana qa
+      origen: sudamerica qa
+    - name: pera qa
+      origen: centroamerica qa
+  clients:
+    name: Pedro qa
+    edad: 23
+    diversion:
+      hobbies:
+        - correr qa
+        - nadar qa
+        - fuerza qa
