@@ -6,7 +6,7 @@ logging.level:
   org.apache.http: ERROR
   io.jaegertracing.internal: ERROR
   org.springframework.boot.actuate: ERROR
-  #pe.interbank.rivendell.commons.api.service.ApplicationHealthIndicator: ERROR
+  pe.interbank.rivendell.commons.api.service.ApplicationHealthIndicator: ERROR
 
 spring:
   jackson:
