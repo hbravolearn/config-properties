@@ -1,6 +1,6 @@
 logging.level:
   root: ERROR
-  #pe.interbank: DEBUG
+  pe.interbank: DEBUG
   org.springframework.web: ERROR
   com.microsoft.azure: ERROR
   org.apache.http: ERROR
