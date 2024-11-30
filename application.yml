@@ -132,7 +132,7 @@ edoras.account.creation-adapter:
       clientId: e0c06fb9-49c9-4d61-b444-fe4d1c3e7602
     - name: izipay
       applicationId: RzZYuFa7Fd8yb4Ch
-      secret: '{cipher}AQBWgE71rQKFB+r/Eau0wNDNR67TXBNEO+GoDFzDn0fhQylg5i3I7lyIUYAZEgSIyWcjmBjmx3U11unAwh1aUctOp8RvViaQnOD6OetlbVEPd8qfW7cZ+vPABcsudAHIieL4uSP4Kck8nRTzqWTdPktILC7wv4EHPq498d0nbgPZ7oOuf2RSaDWMYHFF65FecmbICepumTNdPXAcSYjIyM7g1DkacFAuQ4uDcyQxqUstyss7YAZw+6ItbV2bhYXX7jAXEPvO5JNNq7tFxqYSzg6XU5NKpD27/76GOZQAklW4XNYqYxb8rZE2rV1dT1HY0604AEaxjtdP+HgHCyLSv/plPo3ZV1bAd5d4ymGBLFEPYx9SMzaDesPa8EAezEFmlc5k1dTuaRN5FerwHEDfLvQL'
+      secret: zPf8h48xwqgB4yzG
       subscriptionKey: e547435595fd4ac3a4291aa456e3d43d
       logoUrl: "https://iziweb001b.s3.amazonaws.com/webresources/img/logo.png"
       backgroundUrl: "https://www.revistagptwperu.com/wp-content/uploads/2023/02/7.-izipay-1-1.jpg"
