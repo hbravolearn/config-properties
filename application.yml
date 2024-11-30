@@ -1,20 +1,392 @@
-config:
+parameters:
+  maritalStatus:
+    - value: SOLTERO
+      label: Soltero
+    - value: CASADO
+      label: Casado
+    - value: VIUDO
+      label: Viudo
+    - value: DIVORCIADO
+      label: Divorciado
+    - value: CONVIVIENTE
+      label: Conviviente
+    - value: SEPARADO
+      label: Separado
+  carrier:
+    - value: CLARO
+      label: Claro
+    - value: MOVISTAR
+      label: Movistar
+    - value: ENTEL
+      label: Entel
+    - value: BITEL
+      label: Bitel
+  streetType:
+    - value: AGRUPACION
+      label: AGRUPACION
+    - value: ALAMEDA
+      label: ALAMEDA
+    - value: ANEXO
+      label: ANEXO
+    - value: ASENTAMIENTO_HUMANO
+      label: ASENTAMIENTO HUMANO
+    - value: ASOCIACION
+      label: ASOCIACION
+    - value: AVENIDA
+      label: AVENIDA
+    - value: BAJADA
+      label: BAJADA
+    - value: BARRIO
+      label: BARRIO
+    - value: CALLE
+      label: CALLE
+    - value: CAMPAMENTO_MINERO
+      label: CAMPAMENTO MINERO
+    - value: CARRETERA
+      label: CARRETERA
+    - value: CENTRO_POBLADO
+      label: CENTRO POBLADO
+    - value: COMUNIDAD_CAMPESINA
+      label: COMUNIDAD CAMPESINA
+    - value: COMUNIDAD_INDIGENA
+      label: COMUNIDAD INDIGENA
+    - value: CONJUNTO_HABITACIONAL
+      label: CONJUNTO HABITACIONAL
+    - value: COOPERATIVA
+      label: COOPERATIVA
+    - value: FUNDO
+      label: FUNDO
+    - value: GALERIA
+      label: GALERIA
+    - value: HABILITACION_URBANA
+      label: HABILITACION URBANA
+    - value: INTERBANK
+      label: INTERBANK
+    - value: JIRON
+      label: JIRON
+    - value: LOTIZACION
+      label: LOTIZACION
+    - value: MALECON
+      label: MALECON
+    - value: MONUMENTAL
+      label: MONUMENTAL
+    - value: OVALO
+      label: OVALO
+    - value: PARQUE
+      label: PARQUE
+    - value: PASAJE
+      label: PASAJE
+    - value: PASEO
+      label: PASEO
+    - value: PLAZA
+      label: PLAZA
+    - value: PLAZUELA
+      label: PLAZUELA
+    - value: PORTAL
+      label: PORTAL
+    - value: PROLONGACION
+      label: PROLONGACION
+    - value: PUEBLO_JOVEN
+      label: PUEBLO JOVEN
+    - value: RAMAL
+      label: RAMAL
+    - value: RESIDENCIAL
+      label: RESIDENCIAL
+    - value: SIN_DATA
+      label: SIN_DATA
+    - value: SIN_DENOMINACION
+      label: SIN DENOMINACION
+    - value: SUN_RAMAL
+      label: SUN RAMAL
+    - value: UNIDAD_AGRARIA
+      label: UNIDAD AGRARIA
+    - value: UNIDAD_VECINAL
+      label: UNIDAD VECINAL
+    - value: URBANIZACION
+      label: URBANIZACION
+configuration:
+  features:
+    anyFeature: false
+  crypto:
+    path: /tmp/apps-keys
   settings:
-    pool: 12
-    queue: 45
+    anySetting:
+      rule: anyValue
+    personalLoan:
+      accounts:
+        validationProperty: 'hasCreateAccountButton'
+        type:
+          - CUENTA_SIMPLE
+          - CUENTA_SUELDO
+      expedient:
+        procedureType: 'SOLICITUD'
+        productCode: 'LOAN'
+        productClassification: 'TRADICIONAL_CAMPAIGN'
+        managementType: 'SIN_FIRMA'
+        channelSale: 119
+        salePoint: 898
+        storeManagement: 898
+        productApplication:
+          productApplication: 'LOAN'
+          productApplicationType: 'SOLICITUD_PRODUCTO'
+          productClassification: 'TRADICIONAL_CAMPAIGN'
+          product: 'TRADICIONAL'
+          subProduct: 'TRADICIONAL'
+      qualifier:
+        product:
+          group: 'LOAN'
+          type: 'TRADICIONAL'
+          subType: 'TRADICIONAL'
+          evaluateGuarantee: false
+          evaluateMemberGuarantee: false
+          evaluateDebtPurchase: false
+          requestId: '1'
+          requestType: 'AFILIACION'
+          evaluateConjugalIncome: false
+          isPrincipal: true
+          installmentType: 'ORDINARIA'
+          gracePeriod: '0'
+          customerHasDesgravamenInsurance: true
+          specialRate: '0'
+          dueDay: '02'
+          term: '36'
+          accountOpening: false
+          desgravamenInsuranceType: 'INDIVIDUAL'
+          currencyCode: 'PEN'
+        expedient:
+          managementType: 'SIN_FIRMA'
+          procedureType: 'AFILIACION'
+        customer:
+          hasExtracashCampaign: false
+      disbursement:
+        unemploymentInsurance: false
+        requested: true
+        unemploymentInsuranceAmount: 0
+        constancyType: 'ENVIO_ELECTRONICO'
+        subscriptionType: 'ACCOUNT'
+        authorizerUser: 'XT8052'
+        authorizerName: 'EVERIS.Fabian Jaramillo, Sammir'
+        reduceRate: false
+        disbursementType: 'NO_PRESENCIAL'
+        customer:
+          hasExtracashCampaign: false
+    simulator:
+      personalLoan:
+        groupCode: 'PERSONAL'
+        productCode: 'TRADICIONAL'
+        deliveryTypeCode: 'ENVIO_ELECTRONICO'
+        reliefInsuranceType: 'INDIVIDUAL'
+        reliefInsuranceId: 'INDIVIDUAL'
+        reduceRate: false
+        productClassification: 'TRADICIONAL'
+        channelCode: '119'
+        storeCode: '898'
+  applications:
+    - applicationId: RzZYuFa7Fd8yb4Ch
+      name: izipay
+      secret: VPC53XhvzxHd951Z
+      subscriptionKey: e547435595fd4ac3a4291aa456e3d43d
+      logoUrl: "https://iziweb001b.s3.amazonaws.com/webresources/img/logo.png"
+      backgroundUrl: "https://www.revistagptwperu.com/wp-content/uploads/2023/02/7.-izipay-1-1.jpg"
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'zasoquibebru-4749@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '6207001556817'
+      privateKeyFile: RzZYuFa7Fd8yb4Ch_privatekey.pem
+      publicKeyFile: RzZYuFa7Fd8yb4Ch_publickey.pem
+      cimaOfferMatrix:
+        enable: true
+        values:
+          - amountRange: [0,500]
+            termRange: [1,1]
+            interestRateRange: [20,150]
+          - amountRange: [501,1400]
+            termRange: [3,3]
+            interestRateRange: [20,150]
+          - amountRange: [1401]
+            termRange: [6,6]
+            interestRateRange: [20,150]
+    - applicationId: ehHRWCZ6j9xaxw33
+      name: kambista
+      secret: 4UhgnHLTrpvpezGc
+      subscriptionKey: e547435595fd4ac3a4291aa456e3d43d
+      logoUrl: "https://iziweb001b.s3.amazonaws.com/webresources/img/logo.png"
+      backgroundUrl: "https://www.revistagptwperu.com/wp-content/uploads/2023/02/7.-izipay-1-1.jpg"
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'EDUTESTING2023@GMAIL.COM'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '8987001215710'
+    - applicationId: stocadrEweChaZix
+      name: esan
+      secret: MicrapusuMAYefec
+      subscriptionKey: 0a8dfc7610114b30b8273396ad476b55
+      logoUrl: "https://lh3.googleusercontent.com/fife/ALs6j_FiO85nDFaP9Diw_rjxJuJopcBHO-7AYSs2a2yaZ5VUVXCN3QXWtyVPs4N6ql0AbgnNPtjYElmb-27DZHCTGe0q_fb5RP0vdG1VPCXST6hwCfNq7C3vmPI0Qce53hViT-q1oU2ZjQHZRd-IeoExjhU_Ljm01OwVEhT4qGyLEjgBwnhf_VxUIzoiGZKf_u8zkGUB3u38UpJFkwEUO-k5-y_f4Nl4Tl_J5VJODkcZULXa6Aj1BG1srjNz6_zvcVqGwnsaZt2KNp7QgzLJWw2jVs2GiJPTVFF_GSvRAJlr9b66CO2HF6MQBP_vsLH0ALRRAoLIRdfiDzzoR_afdC5DraUcsqDXtpC8Mo36GCodiNih1uTk9deIucJ8ZFWYwWvAqKuqnLY3gTAZ2DwURAN_O7cOGl7-_FzCkuI1PQLwPZfTsKAfjA_XtVRfco_kQHc4zTvFVRoQBpzaatXqPK3hxTmWO9R3QfroATXUNMyFivYWKZYmAjvTH5wFwb7bejjQn_Jrv0zAHo2WQoZ-c-TXTQwAk4bgsWICVZ0qZ6wfXTzhdlFvzCwqgtbDGnjEFWY3mDTYBgcbvvhFvLhgYZfwJ6mZ22oGd39NTYy1bbgdHttM_ThJHL__jyOu8kWu6CiBVO0vJ7xVoZFLETzfoCLai3J4DNaKrOQho0f3RtMNF-jFUN-rmThhYpto1nPG9whraY_xVPaBcJD_5wbxSXX1ZyBkpuHWMi2hhiW4jgU_wIgHpiVvICcgPYwFzNkhe-aCv_zGvyLc6j-U-xS70FDYLZSC1wWjeBA52VVDSLOd4yr6NXuO5m_4WFvG8p1WmbbKDXZgKdPua8HgZu40ZvJYdEMVPZlLMVQguAypLRXnEsand_bGi3-3lmlUmE4--vdbzeScvbtXGVkoxNYjKW8m8LF2k5VhAeqcXe_r7Z2O8OyObCprxxLuyl3qpwQrZ4Gm9lPCTkYU6oc8UkTODdxkA6BzBga17ezoJQtJL6RKeveHs8Ydx4dVfGCOQ5nefwpbkD1_11reXdB-9Ejzq_Cp6zEnbEfaVZTBCLp6GG9nXE33gax551nePTnRrTmpdfKQ-_yRH341U4aPpVf8j0RvrSgEpyJthweJbQ3igN90SG1q6tCHzl74EI-DH8HxJ5tDzoDqrduUNLauUwEZOifAK2KUP1Cy_GsW_w-4R9MwJ_O56zrqx7O1d1XJtzw3X6uYbYLgZi8_zRMdqDCbSbxt2EbpLDzz76EopcCxQ16yfPwqKBrLQkdhk83Ln5VyCEnYBiT5bxMt1XhMb2t_am8yJh2kcbu2yBLzwDqyEu0qEDMzAQ93JbUMP7eyTc7L3Eaz4u3VejP6n2t7TUq1A-IwMes7nboZhYeIS_evkqcw1CPDB-_Wm_4qq_G8WV-bVJHWVgiTO0RtT4XGqwozUc8Uer_J8JYLHULkRY50oOVkYsrFVTRScU3MLYyjZYt4NvcRkNwPFjJGUJ1D5SPEwGkjti_3u6FCgRzGpr6CUj0zdCY7polVgDysZzCoF-orlntI0i1z6lbjB8MwSsxvG8-auOTnpoWGW-16GvIXGhzDQaySv64mA1xxjVSy6wqApHcyLmWoNLSp4-Annlo9vbP0K9ecvPQRaM7oq8GPI9w4b4oevkHtotG4VT2_4HjAlM6bEtrdmrTmcxP7AxZoGY19EvBDZXuOiSoIldtdFJNoenxzSPfkkEOR8RAhKFuRdCPi7k5KJrgRF8I5oPc9H01r5YwGjdkzrwulmEQ4iegDl6vGMZFphVg9drS34iqLvpaa=w1262-h973"
+      backgroundUrl: "https://lh3.googleusercontent.com/fife/AGXqzDm5Otv02Ziupia4aoA0ZI45MBOooDRSRfFe0RfdvjKYrdXq7rquMWnHIsYCAOj0mUcXHgum4QRK8u4qI7YM7xE_XhUxlcywPbng0usMHCPo9i0ta8hvvmGZd4lbwAIFWGbsB45oMWR4rmdEGeAPGhUv4Lt9K4Z9w8c5HILtSK-ZNdbdNqx746sNxTYVFW5bfJF-zHC2pR_RPgqI6bOjpGkXW6jC5MbmGKRdw6ChDjq4-Is_XB8tdgA8zX8e3-5eHcoNjg-mWjwX83sqMX9a7sHaDlj-FMxPETqvv7UcslgHNGhA3m8FH-rIsjpL1Ic97IzTLWPQpkhypZuslMDP2EYZy2oHuMHfajLTacJShECEvj03QKofCVI-WvddCT9w77dUGlc4fK-B44FrPVVjATUsiCUUqpwtCEaazxOUfPO2spPoSyF3onq_FV5RJGgqTwPXUdnRx6Ym4C7RCtq1MybTPVsJGYBzwTftmDbv_EP1lt9yU7qrx605TXQQxFR_y44IrXzcUBYj4kHrJyw1o-PmaFgU8cOlQ6HBgLBCEOR8ptrqhJQZLHMXuil3T7bWYxtAGTEj8_vxF8BxOIrjruQ63-L4eaAOegNySIAfFfaI1d1ldEJdZJ6Fj5H2Wk9Ba6MIwTh27HTYDCry9RBoeTaK-_LbFwNO-VmmG9iFAzuHQ0rxA4tscpfOgEdYUO2zGGCyS5mcdzeqlLzzbTVwt1rSW3sBgJjSI8Is-zmSc8iHearNg13Q4cMIiQA4zoAK03Nu8ajUZXJAdaaeE0H8XTQtdpRcO0S21xeQarqVIW_8eQj7PcuLcp4_u31Qnoax_Y9318AI1Se9nPX__5BhN3kkwsuhqweAC0A3YqgQxy7v7XgQIwD2hAzekSiB4B4HXrRWUCO__7JXXJrKcb9qihU5m7yk8ASh00rzYpaBCgRxF3i2OgopTOgvTlHYTO5Z2drHSnNUWPkbDLu8PzXfS1UH5rjRYUphyyi75bxYMoGKjxgisLWQOx5wqbUfR9reL8zsEVDBVSNAJmG7NsBl4vIBrbADZB5yUujgydon9Iv5Cg93Rs7qqEnKFxkKCuKjZbFVsTFjLF3kBpmoYyn7wWg4P3GiasEU7MUe9SsX5GJ26bC-zKbAT7z3U_8p7owZ8qoLLDIWN1zy72c4rpLjH0rMxxOcipcONXQb9jMyWysXLDsc1ikzOO0H-siRsocTUXfYPmAcTVXQANaucjw28mZHMYzYjXy6nVl8CH29FbH12GqMnbfiu6zRGwK4_ASwPkbCxCtb6JgDBTmG-1nTZzY4QO9p4kCtDbeBiHIUawanPBG3maf7dD-VtzOdg_znyenZ-71xvrLvHXyhRAIPZBqbUMyp21K9hZkUToplReo5vpwUsQpT2zbe5IXYx3_4CqEvxozf7xTVeVvWFPIBDQoGXXUPe7n1eTODGOVV8W0uHnMfVDD6vXCcYjhnLtDpU9ukd5KdDp1ZDDvrVBAGPcc1AB1LsIs_Va9QVe9R8Gn3eOCld1Ny1QBfkz3X8XIHY4iZxnVk9TGOcSA3ECevNaboMqZxzel8WB9f0Or5doBs5-SR_3o=w2880-h1592"
+      features:
+        anyFeature: false
+        ecommerceEnabled: false
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '2007001538156'
+    - applicationId: SwLTHUkepHifREmi
+      name: nmviajes
+      secret: trItespAbOVospUc
+      subscriptionKey: 9f5039034bd047a1927fc7634b7c8dec
+      logoUrl: "https://lh3.googleusercontent.com/fife/ALs6j_GkjKlrZVmleheqteeLaRo2vw-LgKrdxBg7EcKgG2noqEBs4qgJmY1fw0PIR1WYx7oeKlaAOcUM9jIxfxcel0J-TQKceeO-88LaLGjiZFoswOZleeNyiOBOg8SC_N9HEUImch98pZMsm9a0-pcP-xBZA953pwCljVTAbZIdYHcyV7xHpRCPi4uwPFpxPtuLgInhx671fzagf9z04Rke_6453kqEpjyXdv3G5WjGJ1hsC7rLNaYe8fIVkZheoQDei5zVJo_qw9PmsJUKiCwfiyszAP_O5VUTj6i5mwZgt3JFgPFXzWg5f7vEsjgxHn4bdx5Ij5VL29L-xLvSIHKJbX1cBkAbd55TM2UeDCdOtikXd4tWIJFihcz8XJEXU1wJIb6pnPb1xrqFFGTYNS5ewVnnqhYlE67OgGheewewQhGrd_QWyoeyKD095z5SnMiuZ5U9mGLlI7OOvTsz8nRyOWYu4qssa-g6Np3xaNFmt7JnyAKzEqf4v_ssoEtg5k8uMBBy_hcGMIi7LHF0DGFKT7TEAlS4nmnE_6hcVWI26IujZdtnkfAnmTRTmyEARhIFvqeUQg-YI7fzHLAsc422aUPsFjfc_e7laU9d0DfsKuaIhzq1lYuQugNZawE9FUqzFrUMpXLzVUTBkfEhdjIiuUwdBEBsXE3eyuHs5OCLkKQvdGomIFHih_XdTlKhp21fHtrTRkmlo9vf2M4hboXu2qEmsTBks8PVGawfouSRTz4HLbjPSGTO3_QidLLeYx-PzCGRDC-jHc6S4niECtnc8ABiIVoo7GIHFs6QMDmrZ-_-5xYlVd46Z3rdiGS1FT8OfGMvFWnHIvzVRd-NaCi4y_23qAslaNZYgmrtr1YAqhYe2CBXrQMfWsLux3_WB7rouWbtJpVjdFKx6VYyjXXxa3f3x-63_KVrAbcZ3w8VZATmHOzdcr6yPuJLQHhUMA2M3b9lrH0z_7OM0vOYxH30XRbgJVlpcBPtCPYI_QfVX0NrMPiUDO6Tubcib-yZBO_hACgQ14pmEv3by06L3R00ZZicQHJxnjDKHVYQIo6aGY2h04YfokoxK6zV2FUIVHCmcaMehGx-gcDYaaLMkjMHxdfkQ3R-1u8DE3V1Y1HEtOqpSL2gCnOA_UkykAIIYBAjMNl2hMGK2rmbEnifz2DXmpVDJPhZcfVHxBMLL17BdYhYOcx21Kew6Go7h9sXl08O__GPdfSRtJxtJ4L_V1ERvMadyqW18AAwbzfn2kC2NTmo0e2809Lg_r90bQ828mfm8ICk-jR9n9jcPwdH6NCRy1Zy7shuCHtPZaG3P4OohqtQvY1WgvbzjZUF1GDGeoYAQiWgeirNuzXlvKhAbR4HrVlt2FPIizMKZCbuzgBUL4DENUtkUX2rSMlmEeexhbwPX087Q7iBDNp1EYhWhCl9iPDACxBabmCL8LNec9c5AdyVLyLfaRHeDlIv_uiwr5MKZS2c0qsKkypG5ro3UbKAfegv0gMX1YOWSXO7SHVGzWmt_UvhDWWDgRQZ5G_7qs5jkCbWIU-4OVxZvFgP71c-Rz_kd4DURllQaA4eAJUP6geTbxgW1Rz4mi1BY_orCfwpC90KNFCWqXQ2sNZflrwhVQjysUjStFlkOOI8qfaN6wplJyhhph6AkjmpwnAUruIk5lYn7XzmdSoNus0zKxDyK4eUHDMjAQXy2QuWBp7Qho27447b8eV1U0ps1V9DhA1ZH8yYpUYbkHSQHPDLz81jaqxwcK_yyIV3AxsJyJcUDZTCanNxKeYxnIcALoldh7-N1g=w1262-h973"
+      backgroundUrl: "https://lh3.googleusercontent.com/fife/ALs6j_F-G81LSmHdaOFG4ZwgUII7_tn7RYo5fy2MhmNhszeehUeyXsTlnB3PXkFkdNxzQTvIWh1hn0k-JTEu042iIIcSIaZVFt9wzsnvZFVv8GVIdztArTB2ttL6XmoIGTeXxv2vrzbk3E6S-F5mPjBFfkfidQP9ydN7UAWWkMHiBL5OR7Lng9yiHlgaikbYRXIDjNGgDeARnw-Sh4pMFqLyEN8Xhz0PqqlSUPBZ-H0J5kthiEXQBbL7DRoftAPWVNpXYgjkH2AkHWoSKtp6yp-TcjvKfDyiUyg__peIVB8tDRMp_T5aSHRRdlumkGPTjXrICTemxngGjjCOOskJ55QLKW8US0K9bUpecNAk9s9H9gfEs7r7IafIcVzVZgYULFFukhQGAOvfKDEMMdZh6qRBk5zf2rHxnb15CV6GeyuY2TqfR59Zbchu-LAt36wBbDSPjfkEDY0bM1EhEsZ5anwuzz7M5_zcUokM2UsIu9tV95W7fSamduKXbHFLttcct87xblEjKAb5-OT2G02Ji_P9TG9p3048G-xVV4mG3IMNMyBPaPrRuiQILvUXE1yjoIcx_q9dHa5HfeeP9CyLNuEqDiSKezmEB7w_0Md4e24M4dF4l0qVPDU34gs1n0cSs8EWbMpX60b5VAYdHQU5nBSYsOUUv1CGalg3e2v9XtiaVVyeP1zI9CrkqPiMOf7WIg4Pmzx0BCOJbnSOXKaIbClVkyx8KL1vnOHTMu8dtbF4c-p29rQ3x2HLmAi0br-bVPBLoOhuuLqEzVqMEDFsJTmjPro9VkbEgsdf_amPKLhDshC4bDaS_cKhGzzE-IGAWbBJ87_4phPIIdUTOqItcsgZtSFbiKsXAwgGZzkum-LEwf-jPEQk0FeUptcr-Am4SBnJ6JMv4_XLcdK2YsXZCkqR-CIlJME7dGyRXOSmevi2ZW_qbx0XrF26oljkpAYP9MKUmn2W1fr2Q6xtPduh7fEJxBvRyoFNXoC5Me6wvSo1ax7tffjzWoFgkObUWReip53YdVwC63CR5FnQAFZ1O9Dd3QGjcvCCcbO_KYeBw4KPa1z8GCjITjf6lnQqh6_3FjhG4Mgd7l2SW-GtmMAGE_44t6DCj_c6CHkOktZTYPu9xLy4hPEATvOBXT9OHz19B8c9aRbMOPMCZ4GRcH7U7al8DAgFyK_pAFM5JF0IgoJmhBn7Wj6t4AoBevThNb6pb2SzZD063mD_IexRNLt1aNrx7aUfriG0GXAQVte0JwzBmY7sOGpGU80cCHMDf1cgQ--vEH8lZF18i8BvpxbOBfophxMmu5KjtO7N0Eu7Gksl51mjDk3j6BG_M58ZUiexcPwT4pmSccGWnQ77N-JcZsL6agNFsz1MVhwSqJupayO8gHZnYwvv-t67euTInALl5NkRCt4P56gSMAuN1EYmDJyOns1Mw4GjVgfMI_mwSMyuXBZpARhmLhOqWKJAKzvBdk0Z_1isRBrxisouf1V4Q0efjcIm_59K6Kn_MByu7I0cwsxQSB-inBdxh1sJYc3kENOVeCywEY3LNrwlFCYAiD_HkD7zifTusM_hvst2XeJ7NNJZc6Sx4FOZ0EbZWOFzBKmhi8ifTDT6nr2R90FUetiSjmSGU3cf2MoRPoOlVb5FxiI5DlI9e-ULICNTHI7FKXKHF9u8zEVKaizN3GX3u9Mb7V84OQl_SAyHra27ZSr4sn5OCMs_9NMvEHWbd0MNA8EBt110VBZPPpnt_JBQWj6Kj5lZ8v8wCsryAJ6i0AcxH4dMKtio3VNenAVmyPPPPlVVow=w1912-h973"
+      features:
+        anyFeature: false
+        ecommerceEnabled: false
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+    - applicationId: FRlspiFRLGiyIdru
+      name: domiruth
+      secret: hLcrlTeCaPUwreme
+      subscriptionKey: 793cf0b434614c9eb3bc505713ffbb4d
+      logoUrl: "https://lh3.googleusercontent.com/fife/ALs6j_HUfgvIICCG0yZE0VRiDHA7hzlAqcJyhbsbDlX8Qfbc_kPtoD2zowWWGHk_nAwYkCtnuqIonu4gkDa1_FXts2xKMILsJztjwIxx3FKE-DLR9xR9i5XXOMglRaWa0TEvrRFd-fxdsVDKyimFgKr7UJ9W2EoxkdFJd-Zk6AjEMAW-zsxiRDWRO-suoslXN_vBNwkLSCOz3la7Ukzf2tvszlMlghhsRSQqKJW3SPBmz-irAfWHws-05OyiO6PnIxLOxklUewgjdxibNtq4K43NPTIzsdoiKxVqWo9bjBXUxDqiWRwn7DlWys_v6UUVuZw6pBf4I4cWNeDPZc5y_MPZnW-1R_KGLVAVvEv5ghXYG39n1DBTBSjbdU3myrtL7UHSdVHkWJkr1YkfYJEzJWsj9PDaeW4o8G_9DgxeIGALTOn73z06JKif-sc1vlyTEl7cIY6eDeci7KAZEugLFGk5ZNU_9eIvfxdJ9-zex6FO_GDjRtUa_VF0kW055apB_eInW__NoPNGHWMCfkYqPs_5guNSpHVUhB2M652IjSqTKZrurHFJ_Bfi2a-EQIILkKOmFjUHqr4ppFeQiOqQ0n5t8sJ_4zIUDWV1z7j0XK3noj1w8NA1QncFrVAwQwCEga3_yHa1SiOZGYN4lkU6vlGgspXOJ-w9GaxN7dLro7z9G2Drf9Tj2ZZrb9c8deI-u3mhUUfJ80q2fLrOfYgQ_qBPSxSGEkIh2juqex3X0lCUdw5wziALaKeA-E9AGk5YrtqBNBXxPnbcppnJRRaI7lu97F7a40CU47BzUVfEsYlT2xD1RO9eG8BaxJQ7w-SKq1g_VbDm5HJciBUIGG8dm7nMvakBbgN3WbPSxuJBeFPfAXxChy-Ki7SI2AMcCGcSXbw2KNsDgTA1WIPNy9b5PNXQSubsGVrIVkiny4GsHhs3EuumfOdlaAJ4ETHzUaSPJUut1-1aGJxubMre1MaeYJpkVbXE5m_bCw1BEuFI58uHO_eWkog_UpI8BsAXaL2kbytq_7vv4OaVRWaPbrDujE4e9TDvsDZrP8mmvJJlxknEwKeFVvL9tPyb0OHzMQx91XtooZmTGi5pV6a8qmbQUUW8yfbHCmqFkbIXfHCOjxQJap7U3BMahQGglBt-a8ckOzlMoRzqqDVyJ0NJPU78RLLJjDLGoxdo6buxWK_tJrUZBHs_7TRluQZdMlkDw75ofBfdpn7GN2hM43NPHnaJP20dTjTkjeC-_TCYBxUXTAgLUUVYVRgbA5I7p7a_alcFZH3_n_ir0xvstn5x2xR_ySYay6Vf994Vy9f-Cn_CW8CR6V77e2zhNrtYCqlCnuXJ3_fhXT9-W4XAetZMJ_klGyFlR8JpPndyInfygFHYaT_VwvEyoPss1lHHFUli-mRfqMVp6s6QVhaSr1b3HxB8XoXTakP7gfwA8CybZychOZBykMokvt3UpyvHXtqGo7bEYYNZJdGLTBd00v6ng7o6WNwG9kogmiqk-iZ_lIiseYWPli5T1CNGWomCqRMAD7zuZKpEKwrJtXwAPjlROPICqcS12jANFnrcRiLy1lgZw9ryG763ELEVNYtARa5L5cMikS6WtnbmNmB-bgAKsWVfQ_JcPmFRTjyh9x8kKdztZsy0ZwnokldXZpoiKDIEYaVPWtRJgZc6LT7bl4RoBjDjEjM7H-T83HK-Jl11_X_PX3PVIjjXiBMKNa950twEv8XR9B-YLdxVU42cukUNTayF_NsLVUruWj579B-TXU5ESanJWX3HZPG8a8CZHj7I1Sbb5LorzQNDMPNbKQ8dKnQJPU-YGV52V0j-TISkGenf=w1262-h973"
+      backgroundUrl: "https://lh3.googleusercontent.com/fife/ALs6j_FR8B9uX-LxBlRaYjW45u1dsDKnrOQlwGxONSyWpoxO__sFcOLvoBvbQIqe1Wv0epUMbm2EA8gX3nqJ0LVgwXHYYWB4IYC2BDNRcA-0kKcM8vrS7LYyLbTHQXRoHN08kYpXmCx3O5SRafIgvumL2dUrVASs_qf9ZU0z9NT7MZEPpIS0igz_AiEHt3Qys1OuG1k5AUevG4jHojkTXhWAZdUKKuNrAVYLy5bRaE5m6lG3S34PfX2k5iPGs_U7xSoYyLm4WszjBM887pefclE2BCbQ5t5sDuBgvx96zkRrUB1Z239wOzENFcAOrBO9Ma_S4BYK9z0JKGXmNiA2J3Urs9ZMYXsI5REUpfkf_SCr0kwhoGcwROZ9cH_5n58-VbjcpSAOUa8ZqMeQR_Rzia58ufDWtjOjzuq747_EGJf-yXjagXFxSal3IXw92llomM0txzwUteqDzi8wmDfrbvWKnK75gLhQK-k3wIqJ79MgvlQ-tCyuLfOe0ybz8PYXte34LIrQrSx6gUnXATlQoMyP7MP5qFv1t1TWNc1Sjlxaq7iDsm0s31US1-O7tpYlbpP2IcfR0BKS0BKzrVM4aB7SHpat1CB4ToLPSMSlg70bZyi534s57ONfYdLUFwuAftIZy2-c_pBbq47OwlTPWSo9wdJMgd2onyZKECLZNm48fRzmhEWGtHZvIk5SuQHDpC9jSmngoVNH-cVHXpSumrxd00WeKG1YG1xYzhev3nj5CiEsem8QrrRkxAbQup8Om9hkLRgErgsjEa7_VtxthYGhqwO12O8C1xcAPDEuUis6Ve2cnosxoraEEeBlqpN679MGOLy5TfTmmaLuUu4mxip-OzGCrnNiwh0qqcP9XWHWnns72ozimjWKlBQatLuPHhoOoGg_FWpsZW3MYXQ3uI5Te6udY8Kmk7eGA_zcMVoCdENN_1kZImUo7-wAwiFTFO1OKJ-0E_BO1LhV254fhUkwzsNihM9lGpAgfUJwrigqRQml57iV40TDDDHOJjxwzgC_MVS46-hzXGVK4L3wVI-2gdnQsy_7VQoMFcnm1wobvHklQScvJ0H_lRMmLd9PRCO_UGjiiakUYXHtBSmuwh0SOTiA1rhZsJ9tSrXrO71zybdOw79sROWMy9ruZp4g-LQP6UhOSm-hyi7tBcP_xpLF8HWmYG3wAMDg7jeV-uI3h0IiESX2JmP9ZFJW4H2f2UQidlphwiJ_LOLAyX6MrIFv9dvNap4EjATrdeBlw1m8yiaT84c--vDZrWVR7w-DenOp91LbJ6UumS6HEr60qbRQ-9thbdNT72bXKLS-GmYI6VhkJ-1q_WfNr1ZS4iQEyx34ZuqjrmfcL_Q85YozT8-r70Fel_qY6X0e6TXvm_h_t6tW9LZ3mkZzwFu-6U4LgzQDYKaKnu5PFVgo8S0rgx7G49m-6YVpS5QJO_mcLRG863Z0jU7SQW_FtzQDX5ErHNHO4oZztmFTxAC4L8tL6k0_eVkMaqkyjwHYrjZLaZD6PMAI5ARrponWGfDyrj61EqDZPCKQDuoJgTcVrts3wf0nRyewjMDe8VZ3ka687rOGVuC0H53kb2XjktX0kAQHoEI5Swss3aawNnzAY-9rL5YHx2NSHVl1odpfGukTuJ3vY8mnZE9uLfSsaYmar5BvrEqoCe3VghdttmtMcLtaDoTiRr9sFy3ZBpSYmWYepsSLkk8aQ1KWhYvgaxLeBjc1cm-mkZVivEFNghXkKgyac8MkIsh7zZqZQhBM8XE5L6khX8nI7OTv3bGkA_mniHrsTcD4=w1262-h973"
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+    - applicationId: cRECrLswoyasozaQ
+      name: upn
+      secret: TrobitejaswOzipr
+      subscriptionKey: 83a65f7e801040bc971c2f84417821b2
+      logoUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_logo.png?t=2024-07-31T21%3A54%3A56.950Z"
+      backgroundUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_background.png?t=2024-07-31T21%3A54%3A38.960Z"
+      heightLogoUrl: 100.0
+      namePresentation: "UPN"
+      advertisementMessage: "Nos unimos para financiar tus estudios al instante, sin llamadas ni visitas al banco. ¡Financia tus pagos ahora!"
+      componentMessage: "¡Solicita un préstamo y continúa tus estudios!"
+      loanAsPayment: "Quiere decir que nosotros nos encargaremos de realizar el pago de tus estudios. Esto implica que el desembolso se realizará a la cuenta de UPN directamente. De esta manera, no tendrás que preocuparte por nada, solo de pagar tu cuota del préstamo cada mes."
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+    - applicationId: FneTmOuHkXrZwYbV
+      name: limacricket
+      secret: urcsMiwHKusDLmHJ
+      subscriptionKey: 83a65f7e801040bc971c2f84417821b2
+      logoUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_logo.png?t=2024-07-31T21%3A54%3A56.950Z"
+      backgroundUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_background.png?t=2024-07-31T21%3A54%3A38.960Z"
+      heightLogoUrl: 100.0
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+    - applicationId: FneTmOuHkXrZwYbV
+      name: aviva
+      secret: urcsMiwHKusDLmHJ
+      subscriptionKey: 83a65f7e801040bc971c2f84417821b2
+      logoUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_logo.png?t=2024-07-31T21%3A54%3A56.950Z"
+      backgroundUrl: "https://spcvqbhkrepvhmbcievk.supabase.co/storage/v1/object/public/ibk/upn_background.png?t=2024-07-31T21%3A54%3A38.960Z"
+      heightLogoUrl: 100.0
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'trekoufanneume-1638@yopmail.com'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+    - applicationId: RxFtJqLzNpVmKcWa
+      name: prestamogenerico
+      secret: urcsMiwHKusDLmHJ
+      subscriptionKey: 83a65f7e801040bc971c2f84417821b2
+      logoUrl: "https://play-lh.googleusercontent.com/IG1L4aNo76Ts4NYO0Tob4gb71Ugw_dqc7r7SDOlzRbt4cyb_0cbaS9LMzlZx7L7FeKc"
+      backgroundUrl: "https://content-us-2.content-cms.com/9b3f67ef-5a9f-4acc-8ce8-bcc27fa681c7/dxdam/c5/c5c94d86-24c7-4983-96fa-22085f947650/img_highlights_f2_fondos-mutuos-h1_mobile_2x.jpg?t=1702329799681"
+      heightLogoUrl: 100.0
+      features:
+        anyFeature: false
+        ecommerceEnabled: true
+      settings:
+        personalLoan:
+          emails:
+            - value: 'hramirezg@intercorp.com.pe'
+          account:
+            type: 'CUENTA_CORRIENTE'
+            number: '4407001540409'
+  cache:
+    ttl: 3600
+  asyncIntervalConfig:
+    intervalTime: 5000
+    timeToClose: 900000
+apis:
+  applications:
+    endpoint: https://apiqa.digital.interbank.pe
+  applications_internal:
+    endpoint: http://theshire-applications.theshire-qa.svc.cluster.local:8080
+  bff_security:
+    endpoint: https://apiqa.digital.interbank.pe
+  security:
+    endpoint: https://apiqa.digital.interbank.pe
+  customers:
+    endpoint: https://apiqa.digital.interbank.pe
+  fraud:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/customers/fraud/dynamic
+  reentry_logic:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/reentry-logic
+  expedient:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/expedient
+  person_qualifier:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/person-qualifier
+  product_qualifier:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/product-qualifier
+  disbursement:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/disbursement
+  pre_sale_expedient:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/pre-sale/expedient
+  fa_disbursement:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/assi-loans/2fa/disbursement
   accounts:
-    - SOLES
-    - DOLARES
-  fruits:
-    - name: banana
-      origen: sudamerica
-    - name: pera
-      origen: centroamerica
-  clients:
-    name: Pedro
-    edad: 23
-    diversion:
-      hobbies:
-        - correr
-        - nadar
-        - fuerza
+    endpoint: https://apiqa.digital.interbank.pe
+  parameters:
+    endpoint: https://apiqa.digital.interbank.pe
+  insurances:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/insurances
+  insurances_payment_plans:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/insurances/payment-plans
+  insurances_affiliate:
+    endpoint: http://theshire-assi-loans.theshire-qa.svc.cluster.local:8080/insurances/affiliate
